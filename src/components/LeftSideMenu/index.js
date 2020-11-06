@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Accordion from "@material-ui/core/Accordion";
 import AccordionSummary from "@material-ui/core/AccordionSummary";
@@ -21,6 +21,12 @@ const useStyles = makeStyles((theme) => ({
 
 export default function LeftSideMenu() {
   const classes = useStyles();
+
+  const [open, setOpen] = useState(false);
+
+  const handlerOpen = () => {
+    setOpen(true);
+  };
 
   return (
     <div className={classes.root}>
@@ -63,17 +69,7 @@ export default function LeftSideMenu() {
             component="nav"
             aria-labelledby="nested-list-subheader"
             className={classes.root}
-          >
-            <ListItem button>
-              <ListItemText primary="Sent mail" />
-            </ListItem>
-            <ListItem button>
-              <ListItemText primary="Drafts" />
-            </ListItem>
-            <ListItem button>
-              <ListItemText primary="Inbox" />
-            </ListItem>
-          </List>
+          ></List>
         </AccordionDetails>
       </Accordion>
       <Accordion>
@@ -89,17 +85,7 @@ export default function LeftSideMenu() {
             component="nav"
             aria-labelledby="nested-list-subheader"
             className={classes.root}
-          >
-            <ListItem button>
-              <ListItemText primary="Sent mail" />
-            </ListItem>
-            <ListItem button>
-              <ListItemText primary="Drafts" />
-            </ListItem>
-            <ListItem button>
-              <ListItemText primary="Inbox" />
-            </ListItem>
-          </List>
+          ></List>
         </AccordionDetails>
       </Accordion>
       <Accordion>
@@ -115,17 +101,7 @@ export default function LeftSideMenu() {
             component="nav"
             aria-labelledby="nested-list-subheader"
             className={classes.root}
-          >
-            <ListItem button>
-              <ListItemText primary="Sent mail" />
-            </ListItem>
-            <ListItem button>
-              <ListItemText primary="Drafts" />
-            </ListItem>
-            <ListItem button>
-              <ListItemText primary="Inbox" />
-            </ListItem>
-          </List>
+          ></List>
         </AccordionDetails>
       </Accordion>
     </div>

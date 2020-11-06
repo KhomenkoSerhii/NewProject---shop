@@ -4,18 +4,19 @@ import {
   BrowserRouter as Router,
   Switch,
 } from "react-router-dom";
-
-import Main from "./pages/Main";
+import { Container } from "@material-ui/core";
+import MainLayuot from "./pages/MainLayuot";
+import MainBlockComponent from "./pages/MainBlock";
 
 import "./App.css";
 
 function App() {
   return (
-    <Router>
-      <Switch>
-        <Main />
-      </Switch>
-    </Router>
+    <MainLayuot>
+      <Container className="main-block">
+        <MainBlockComponent />
+      </Container>
+    </MainLayuot>
   );
 }
 
