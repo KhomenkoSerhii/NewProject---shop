@@ -1,23 +1,53 @@
-import {
-  Redirect,
-  Route,
-  BrowserRouter as Router,
-  Switch,
-} from "react-router-dom";
-import { Container } from "@material-ui/core";
-import MainLayuot from "./pages/MainLayuot";
-import MainBlockComponent from "./pages/MainBlock";
 
+import { Container } from "@material-ui/core";
+import { connect } from "react-redux";
+import MainBlockComponent from "./pages/MainBlock";
+import LeftSideMenu from "./components/LeftSideMenu";
+import Header from "./components/Header";
+import RightSideMenu from './components/RightSideMenu'
+import clsx from 'clsx';
+import { makeStyles } from "@material-ui/core/styles";
+import Grid from "@material-ui/core/Grid";
 import "./App.css";
 
-function App() {
+const useStyles = makeStyles(() => ({
+  drawerPaperActive: {
+    width: `calc(100% - ${450}px)`,
+  },
+}))
+
+function App({ active, dataItems }) {
+  const classes = useStyles();
   return (
-    <MainLayuot>
-      <Container className="main-block">
-        <MainBlockComponent />
-      </Container>
-    </MainLayuot>
+    <>
+      <Header />
+      <Grid
+        container
+        direction="row"
+        wrap="nowrap"
+        className="main-layout-block"
+      >
+        <LeftSideMenu />
+        <Container
+          className={clsx(classes.drawerPaper, {
+            [classes.drawerPaperActive]: active,
+          })}
+        >
+          <MainBlockComponent />
+        </Container>
+
+        <RightSideMenu active={active}
+          dataItems={dataItems}
+        />
+      </Grid>
+    </>
   );
 }
 
-export default App;
+const mapStateToProps = (store) => ({
+  active: store.getDataItem.active,
+  dataItems: store.getDataItem.dataItems,
+})
+
+export default connect(mapStateToProps, null)(App);
+
