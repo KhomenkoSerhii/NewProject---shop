@@ -8,102 +8,115 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
-
+import Drawer from "@material-ui/core/Drawer";
+import ListItemIcon from "@material-ui/core/ListItemIcon";
+import ClearIcon from "@material-ui/icons/Clear";
+import clsx from "clsx";
 const useStyles = makeStyles((theme) => ({
-  root: {
-    width: "300px",
+  leftSideMenu: {
+    width: "260px",
   },
-  heading: {
-    fontSize: theme.typography.pxToRem(15),
-    fontWeight: theme.typography.fontWeightRegular,
+  iconBlock: {
+    justifyContent: "flex-end",
+  },
+  closeBtn: {
+    padding: "10px",
+    cursor: "pointer",
   },
 }));
 
-export default function LeftSideMenu() {
+export default function LeftSideMenu({ open, handlerClose }) {
   const classes = useStyles();
 
-  const [open, setOpen] = useState(false);
-
-  const handlerOpen = () => {
-    setOpen(true);
-  };
-
   return (
-    <div className={classes.root}>
-      <Accordion>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1a-content"
-          id="panel1a-header"
-        >
-          <Typography className={classes.heading}>Kategorien</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <List
-            component="nav"
-            aria-labelledby="nested-list-subheader"
-            className={classes.root}
+    <>
+      <div>
+        <Drawer variant="persistent" open={open}>
+          <ListItemIcon
+            style={{ minWidth: "unset" }}
+            className={classes.iconBlock}
           >
-            <ListItem button>
-              <ListItemText primary="Sent mail" />
-            </ListItem>
-            <ListItem button>
-              <ListItemText primary="Drafts" />
-            </ListItem>
-            <ListItem button>
-              <ListItemText primary="Inbox" />
-            </ListItem>
-          </List>
-        </AccordionDetails>
-      </Accordion>
-      <Accordion>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel2a-content"
-          id="panel2a-header"
-        >
-          <Typography className={classes.heading}>Produkte</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <List
-            component="nav"
-            aria-labelledby="nested-list-subheader"
-            className={classes.root}
-          ></List>
-        </AccordionDetails>
-      </Accordion>
-      <Accordion>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel2a-content"
-          id="panel2a-header"
-        >
-          <Typography className={classes.heading}>Farben</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <List
-            component="nav"
-            aria-labelledby="nested-list-subheader"
-            className={classes.root}
-          ></List>
-        </AccordionDetails>
-      </Accordion>
-      <Accordion>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel2a-content"
-          id="panel2a-header"
-        >
-          <Typography className={classes.heading}>Großen</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <List
-            component="nav"
-            aria-labelledby="nested-list-subheader"
-            className={classes.root}
-          ></List>
-        </AccordionDetails>
-      </Accordion>
-    </div>
+            <ClearIcon onClick={handlerClose} className={classes.closeBtn} />
+          </ListItemIcon>
+          <Accordion className={classes.leftSideMenu}>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+            >
+              <Typography className={classes.heading}>Kategorien</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <List
+                component="nav"
+                aria-labelledby="nested-list-subheader"
+                className={classes.root}
+              >
+                <ListItem button>
+                  <ListItemText primary="Männer" />
+                </ListItem>
+                <ListItem button>
+                  <ListItemText primary="Frauen" />
+                </ListItem>
+                <ListItem button>
+                  <ListItemText primary="Kinder & Babys" />
+                </ListItem>
+                <ListItem button>
+                  <ListItemText primary="Accessoires" />
+                </ListItem>
+              </List>
+            </AccordionDetails>
+          </Accordion>
+          <Accordion>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel2a-content"
+              id="panel2a-header"
+            >
+              <Typography className={classes.heading}>Produkte</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <List
+                component="nav"
+                aria-labelledby="nested-list-subheader"
+                className={classes.root}
+              ></List>
+            </AccordionDetails>
+          </Accordion>
+          <Accordion>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel2a-content"
+              id="panel2a-header"
+            >
+              <Typography className={classes.heading}>Farben</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <List
+                component="nav"
+                aria-labelledby="nested-list-subheader"
+                className={classes.root}
+              ></List>
+            </AccordionDetails>
+          </Accordion>
+          <Accordion>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel2a-content"
+              id="panel2a-header"
+            >
+              <Typography className={classes.heading}>Großen</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <List
+                component="nav"
+                aria-labelledby="nested-list-subheader"
+                className={classes.root}
+              ></List>
+            </AccordionDetails>
+          </Accordion>
+        </Drawer>
+      </div>
+    </>
   );
 }
