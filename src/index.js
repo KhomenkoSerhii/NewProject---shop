@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Provider } from 'react-redux'
+import { Provider } from "react-redux";
 import "./index.css";
+import "../src/assets/fonts/Lato/Lato-BlackItalic.ttf";
 import App from "./App";
-import store from './store'
-
+import store from "./store";
 
 ReactDOM.render(
   <Provider store={store}>
@@ -13,6 +13,3 @@ ReactDOM.render(
 
   document.getElementById("root")
 );
-
-
-

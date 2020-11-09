@@ -8,6 +8,10 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
+  headerBar: {
+    boxShadow: "none",
+    paddingLeft: "60px",
+  },
   menuButton: {
     marginRight: theme.spacing(2),
   },
@@ -18,11 +22,9 @@ export default function Header() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="static" color="inherit" className={classes.headerBar}>
         <Toolbar variant="dense">
-          <Typography variant="h6" color="inherit">
-            Wähle dein Produkt!
-          </Typography>
+          <Typography variant="h3">Wähle dein Produkt!</Typography>
         </Toolbar>
       </AppBar>
     </div>

@@ -128,7 +128,70 @@
       "minDPI": 60,
       "isDynamicSize": true
     }
+  },
+  {
+    "post": {
+      "ID": 11,
+      "post_author": "1",
+      "post_date": "2020-01-17 12:18:46",
+      "post_date_gmt": "2020-01-17 12:18:46",
+      "post_content": "",
+      "post_title": "Deskpad product",
+      "post_excerpt": "",
+      "post_status": "publish",
+      "comment_status": "open",
+      "ping_status": "closed",
+      "post_password": "",
+      "post_name": "deskpad-product",
+      "to_ping": "",
+      "pinged": "",
+      "post_modified": "2020-07-19 12:20:40",
+      "post_modified_gmt": "2020-07-19 12:20:40",
+      "post_content_filtered": "",
+      "post_parent": 0,
+      "guid": "http://dpe.loc/?post_type=product&#038;p=11",
+      "menu_order": 0,
+      "post_type": "product",
+      "post_mime_type": "",
+      "comment_count": "0",
+      "filter": "raw"
+    },
+    "metaData": {
+      "_edit_last": ["1"],
+      "_edit_lock": ["1595161227:1"],
+      "total_sales": ["8"],
+      "_tax_status": ["taxable"],
+      "_tax_class": [""],
+      "_manage_stock": ["no"],
+      "_backorders": ["no"],
+      "_sold_individually": ["no"],
+      "_virtual": ["no"],
+      "_downloadable": ["no"],
+      "_download_limit": ["-1"],
+      "_download_expiry": ["-1"],
+      "_stock": [null],
+      "_stock_status": ["instock"],
+      "_wc_average_rating": ["0"],
+      "_wc_review_count": ["0"],
+      "_product_version": ["4.2.0"],
+      "_price": [""],
+      "_dpe_hidden_product": [""],
+      "_dpe_linked_editor": ["12"],
+      "_dpe_weight_sqm": ["1"],
+      "_dpe_price_sqm": ["35"],
+      "_dpe_price_radius": ["3"],
+      "_dpe_price_color": ["50"],
+      "_sku": ["4332"]
+    },
+    "image": "http://dpe.loc/wp-content/uploads/woocommerce-placeholder-600x600.png",
+    "editorCanvasData": "eyJ2ZXJzaW9uIjoiMy42LjMiLCJvYmplY3RzIjpbXSwiYmFja2dyb3VuZCI6InJnYmEoMjM3LDI0MCwyNDIsMC40KSIsImJhY2tncm91bmRJbWFnZSI6eyJ0eXBlIjoicmVjdCIsInZlcnNpb24iOiIzLjYuMyIsIm9yaWdpblgiOiJsZWZ0Iiwib3JpZ2luWSI6InRvcCIsImxlZnQiOjAsInRvcCI6MCwid2lkdGgiOjcwNiwiaGVpZ2h0Ijo1MDYsImZpbGwiOiIjZmZmIiwic3Ryb2tlIjpudWxsLCJzdHJva2VXaWR0aCI6MCwic3Ryb2tlRGFzaEFycmF5IjpudWxsLCJzdHJva2VMaW5lQ2FwIjoiYnV0dCIsInN0cm9rZURhc2hPZmZzZXQiOjAsInN0cm9rZUxpbmVKb2luIjoibWl0ZXIiLCJzdHJva2VNaXRlckxpbWl0Ijo0LCJzY2FsZVgiOjEsInNjYWxlWSI6MSwiYW5nbGUiOjAsImZsaXBYIjpmYWxzZSwiZmxpcFkiOmZhbHNlLCJvcGFjaXR5IjoxLCJzaGFkb3ciOm51bGwsInZpc2libGUiOnRydWUsImNsaXBUbyI6bnVsbCwiYmFja2dyb3VuZENvbG9yIjoiIiwiZmlsbFJ1bGUiOiJub256ZXJvIiwicGFpbnRGaXJzdCI6ImZpbGwiLCJnbG9iYWxDb21wb3NpdGVPcGVyYXRpb24iOiJzb3VyY2Utb3ZlciIsInRyYW5zZm9ybU1hdHJpeCI6bnVsbCwic2tld1giOjAsInNrZXdZIjowLCJzZWxlY3RhYmxlIjpmYWxzZSwiX2NvbnRyb2xzVmlzaWJpbGl0eSI6bnVsbCwibG9ja01vdmVtZW50WCI6ZmFsc2UsImxvY2tNb3ZlbWVudFkiOmZhbHNlLCJsb2NrU2NhbGluZ1giOmZhbHNlLCJsb2NrU2NhbGluZ1kiOmZhbHNlLCJsb2NrVW5pU2NhbGluZyI6ZmFsc2UsImxvY2tSb3RhdGlvbiI6ZmFsc2UsIm9iamVjdENhY2hpbmciOnRydWUsImJvcmRlckNvbG9yIjoiI2FhMDBhYSIsImNvcm5lckNvbG9yIjoiI2FhMDBhYSIsImNvcm5lclN0cm9rZUNvbG9yIjoiI2FhMDBhYSIsImV2ZW50ZWQiOnRydWV9LCJjdXRXIjo3MDAsImN1dEgiOjUwMCwic2V0dGluZ3MiOnsibWluV2lkdGgiOjUsIm1pbkhlaWdodCI6NSwibWF4V2lkdGgiOjM1MCwibWF4SGVpZ2h0IjozNTAsIm1pbkRQSSI6NjAsImlzRHluYW1pY1NpemUiOnRydWV9LCJiZ0NvbG9yIjoiI2ZmZiJ9",
+    "editorSettings": {
+      "minWidth": 5,
+      "minHeight": 5,
+      "maxWidth": 350,
+      "maxHeight": 350,
+      "minDPI": 60,
+      "isDynamicSize": true
+    }
   }
-  
- 
 ]
